@@ -9,12 +9,12 @@ var express = require('express'),
 //        our github data on the server.
 
 var proxyGithub = function(request, response){
-  console.log('Routung Github reauest for ', request.prams[0]);
+  console.log('Routing Github request for ', request.params[0]);
   (requestProxy({
     url:'https://api.github.com/'+request.params[0],
     headers :{Authorization: 'token '+ process.env.GITHUB_TOKEN}
   }))(request, response);
-}
+};
 app.get('/github/*',proxyGithub);
 app.use(express.static('./'));
 
