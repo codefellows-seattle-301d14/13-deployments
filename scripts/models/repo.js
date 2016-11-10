@@ -7,7 +7,7 @@
       $.get('/github/users/codefellows-seattle-301d14/repos', function(data){
         reposObj.allRepos = data;
       }),
-      $.get('/github/users/codefellows-seattle-301d14/followers', function(data){
+      $.get('/github/users/patci/followers', function(data){
         reposObj.followers = data;
       })
     ).done(callback);
