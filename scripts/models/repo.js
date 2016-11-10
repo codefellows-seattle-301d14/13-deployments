@@ -8,7 +8,7 @@
        reposObj.allRepos = data;
      }),
      $.get('/github/amosboldor/followers', function (data) {
-       repos.followers = data;
+       reposObj.followers = data;
      })
     ).done(callback);
   };
